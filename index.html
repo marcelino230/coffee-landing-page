@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbuck Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="section-starbuck">
+        <div class="circle-starbuck"></div>
+        <header class="header-starbuck">
+            <a href="#" class="logo-starbuck"><img src="images/logo.png" alt="logo"></a>
+            <div class="toggle-starbuck" onclick="toggleMenu();"></div>
+            <ul class="navigation-starbuck">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content-starbuck">
+            <div class="text-box-starbuck">
+                <h2>It's not just Coffe <br>It's <span class="span-starbuck">Starbucks</span></h2>
+                <p>Starbucks Corporation is an American multinational chain of coffeehouses and roastery reserves headquartered in Seattle, Washington. As the world's largest coffeehouse chain, Starbucks is seen to be the main representation of the United States' second wave of coffee culture.</p>
+                <a href="#" class="link-starbuck">Learn More</a>
+            </div>
+            <div class="img-box-starbuck">
+                <img src="images/img1.png" class="starbucks" alt="logo">
+            </div>
+        </div>
+        <ul class="thumb-starbuck">
+            <li><img src="images/thumb1.png" onclick="imgSlider('images/img1.png');changeCircleColor('#017143');changeLinkColor('#017143');changeSpanColor('#017143')" alt="thumb1"></li>
+            <li><img src="images/thumb2.png" onclick="imgSlider('images/img2.png');changeCircleColor('#eb7495');changeLinkColor('#eb7495');changeSpanColor('#eb7495')" alt="thumb2"></li>
+            <li><img src="images/thumb3.png" onclick="imgSlider('images/img3.png');changeCircleColor('#d752b1');changeLinkColor('#d752b1');changeSpanColor('#d752b1')" alt="thumb3"></li>
+        </ul>
+        <ul class="sci-starbuck">
+            <li><a href="#"><img src="images/facebook.png" alt="sci"></a></li>
+            <li><a href="#"><img src="images/twitter.png" alt="sci"></a></li>
+            <li><a href="#"><img src="images/instagram.png" alt="sci"></a></li>
+        </ul>
+    </section>
+    
+    <script>
+        function imgSlider(anything) {
+            document.querySelector('.starbucks').src = anything
+        }
+        function changeCircleColor(colorCircle) {
+            const circle = document.querySelector('.circle-starbuck');
+            circle.style.background = colorCircle;
+        }
+
+        function changeLinkColor(colorLink) {
+            const Link = document.querySelector('.link-starbuck');
+            Link.style.background = colorLink;
+        }
+
+        function changeSpanColor(colorSpan) {
+            const span = document.querySelector('.span-starbuck');
+            span.style.color = colorSpan;
+        }
+
+        function toggleMenu() {
+            var menuToggle = document.querySelector('.toggle-starbuck');
+            var navigation = document.querySelector('.navigation-starbuck');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

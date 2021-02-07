@@ -1,2 +1,7 @@
-# coffee-landing-page
-this project create with tech html,css,js
+<h5>Web</h5>
+<br>
+<img src="web.png" alt="">
+<br>
+<h5>Mobile</h5>
+<br>
+<img src="mobile.png" alt="">
